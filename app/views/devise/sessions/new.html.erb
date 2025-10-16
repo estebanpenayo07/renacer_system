@@ -1,0 +1,60 @@
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <section class="vh-100 d-flex align-items-center justify-content-center" style="background-color: #eee;">
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-10 col-xl-9">
+          <div class="card shadow-lg border-0" style="border-radius: 20px;">
+            <div class="row g-0 align-items-center">
+
+              <!-- Columna de la imagen -->
+              <div class="col-md-6 d-flex justify-content-center align-items-center">
+                <img src="https://scontent.fasu2-1.fna.fbcdn.net/v/t39.30808-6/292069784_5432345486787745_7577889183605574023_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=shbMPnJTRL4Q7kNvwHAODHG&_nc_oc=AdmVPqvhAYRS0or0ROs9EMXIDDPMHAChQse6wl63B1TBpXPsNb3ueOjQShjUJNfv0T4&_nc_zt=23&_nc_ht=scontent.fasu2-1.fna&_nc_gid=zcfoQzh0tUgjBrJRusjo4Q&oh=00_AfftvOsgC6OtiiyVc599ZBgym-hJFx54EnObFjJd6w2S4w&oe=68F71606"
+                     alt="Sample image"
+                     class="img-fluid"
+                     style="max-height: 350px; object-fit: cover; border-radius: 15px;">
+              </div>
+
+              <!-- Columna del formulario -->
+              <div class="col-md-6 p-5">
+                <p class="text-center h3 fw-bold mb-4">Iniciar Sesión</p>
+
+                <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                  <div class="mb-3">
+                    <%= f.label :email, "Correo Electrónico", class: "form-label" %>
+                    <%= f.email_field :email, class: "form-control", autofocus: true, autocomplete: "email" %>
+                  </div>
+
+                  <div class="mb-3">
+                    <%= f.label :password, "Contraseña", class: "form-label" %>
+                    <%= f.password_field :password, class: "form-control", autocomplete: "current-password" %>
+                  </div>
+
+                  <% if devise_mapping.rememberable? %>
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                      <div class="form-check">
+                        <%= f.check_box :remember_me, class: "form-check-input", id: "remember_me" %>
+                        <%= f.label :remember_me, "Recuérdame", class: "form-check-label", for: "remember_me" %>
+                      </div>
+
+                      <% if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+                        <%= link_to "¿Olvidaste tu contraseña?", new_password_path(resource_name), class:
+                          "text-decoration-none color: red", style: "color: red;"%>
+                      <% end %>
+                    </div>
+                  <% end %>
+
+
+                  <div class="d-grid">
+                    <%= f.submit "Ingresar", class: "btn btn-danger btn-lg" %>
+                  </div>
+                <% end %>
+              </div>
+          <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
