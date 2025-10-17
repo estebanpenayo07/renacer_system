@@ -3,5 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap"
 import "@hotwired/turbo-rails"
 import "./controllers"
+import "./stylesheets/application.css";
+
 
 

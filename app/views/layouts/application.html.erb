@@ -22,6 +22,12 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
 
   <body>
+  <% unless devise_controller? && (controller_name == "sessions" || controller_name == "registrations" || controller_name == "passwords") %>
+    <%= render "layouts/sidebar" %>
+  <% end %>
+
+  <main class="main-content">
     <%= yield %>
+  </main>
   </body>
 </html>

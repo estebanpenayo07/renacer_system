@@ -1,0 +1,127 @@
+<div class="sidebar">
+  <div class="logo">
+    <%= image_tag "logoCCRENACER.png", alt: "Mi empresa", class: "logo", width: 70, height: 70 %>
+  </div>
+  <ul class="nav flex-column text-center">
+    <li>
+      <%= link_to home_index_path, class: "nav-link d-flex flex-column align-items-center" do %>
+        <i class="bi bi-speedometer2" style="font-size: 2rem;"></i>
+        <span>Inicio</span>
+      <% end %>
+    </li>
+    <li class="nav-item dropdown position-relative">
+      <%= link_to "#", class: "nav-link dropdown-toggle d-flex flex-column align-items-center justify-content-center py-3" do %>
+        <i class="bi bi-people mb-1" style="font-size: 2.5rem;"></i>
+        <span>Administración</span>
+      <% end %>
+      <ul class="dropdown-menu shadow">
+        <li>
+          <%= link_to home_index_path, class: "dropdown-item d-flex align-items-center" do %>
+            <i class="bi bi-diagram-3 me-2"></i>
+            Registro de unidades
+          <% end %>
+        </li>
+        <li>
+          <%= link_to home_index_path, class: "dropdown-item d-flex align-items-center" do %>
+            <i class="bi bi-mortarboard me-2"></i>
+            Registro de clases
+          <% end %>
+        </li>
+        <li>
+          <%= link_to home_index_path, class: "dropdown-item d-flex align-items-center" do %>
+            <i class="bi bi-patch-check me-2"></i>
+            Registro de especialidades
+          <% end %>
+        </li>
+        <li>
+          <%= link_to home_index_path, class: "dropdown-item d-flex align-items-center" do %>
+            <i class="bi bi-compass me-2"></i>
+            Registro de conquistadores
+          <% end %>
+        </li>
+        <li>
+          <%= link_to home_index_path, class: "dropdown-item d-flex align-items-center" do %>
+            <i class="bi bi-file-earmark-text me-2"></i>
+            Informe correspondiente
+          <% end %>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-item dropdown position-relative">
+      <%= link_to "#", class: "nav-link dropdown-toggle d-flex flex-column align-items-center justify-content-center py-3" do %>
+        <i class="bi bi-cash-stack mb-1" style="font-size: 2.5rem;"></i>
+        <span>Finanzas</span>
+      <% end %>
+      <ul class="dropdown-menu shadow">
+        <li>
+          <%= link_to home_index_path, class: "dropdown-item d-flex align-items-center" do %>
+            <i class="bi bi-wallet2 me-2"></i>
+            Control de mensualidades, caja y gastos
+          <% end %>
+        </li>
+        <li>
+          <%= link_to home_index_path, class: "dropdown-item d-flex align-items-center" do %>
+            <i class="bi bi-graph-up me-2"></i>
+            Informes de flujo de caja y mensualidades
+          <% end %>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-item dropdown position-relative">
+      <%= link_to "#", class: "nav-link dropdown-toggle d-flex flex-column align-items-center justify-content-center py-3" do %>
+        <i class="bi bi-box-seam mb-1" style="font-size: 2.5rem;"></i>
+        <span>Patrimonio</span>
+      <% end %>
+      <ul class="dropdown-menu shadow">
+        <li>
+          <%= link_to home_index_path, class: "dropdown-item d-flex align-items-center" do %>
+            <i class="bi bi-archive me-2"></i>
+            Control de bienes
+          <% end %>
+        </li>
+        <li>
+          <%= link_to home_index_path, class: "dropdown-item d-flex align-items-center" do %>
+            <i class="bi bi-file-bar-graph me-2"></i>
+            Informe de patrimonio
+          <% end %>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-item dropdown position-relative">
+      <%= link_to "#", class: "nav-link dropdown-toggle d-flex flex-column align-items-center justify-content-center py-3" do %>
+        <i class="bi bi-file-earmark-medical mb-1" style="font-size: 2.5rem;"></i>
+        <span>Secretaría</span>
+      <% end %>
+      <ul class="dropdown-menu shadow">
+        <li>
+          <%= link_to home_index_path, class: "dropdown-item d-flex align-items-center" do %>
+            <i class="bi bi-calendar-event me-2"></i>
+            Control de actas y eventos
+          <% end %>
+        </li>
+        <li>
+          <%= link_to home_index_path, class: "dropdown-item d-flex align-items-center" do %>
+            <i class="bi bi-file-text me-2"></i>
+            Informe de actas y eventos
+          <% end %>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-item dropdown position-relative">
+      <%= link_to "#", class: "nav-link dropdown-toggle d-flex flex-column align-items-center justify-content-center py-3" do %>
+        <i class="bi bi-person-check mb-1" style="font-size: 2.5rem;"></i>
+        <span>Autorizaciones</span>
+      <% end %>
+      <ul class="dropdown-menu shadow">
+        <li>
+          <%= link_to home_index_path, class: "dropdown-item d-flex align-items-center" do %>
+            <i class="bi bi-card-checklist me-2"></i>
+            Informe de autorización de salida
+          <% end %>
+        </li>
+      </ul>
+    </li>
+
+  </ul>
+
+</div>
