@@ -23,6 +23,7 @@
 
   <body>
   <% unless devise_controller? && (controller_name == "sessions" || controller_name == "registrations" || controller_name == "passwords") %>
+    <%= render "layouts/navbar" %>
     <%= render "layouts/sidebar" %>
   <% end %>
 
